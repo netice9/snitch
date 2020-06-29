@@ -1,30 +1,54 @@
 <script>
-	export let name;
+	import Nav from './components/Nav.svelte';
 </script>
-
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		position: relative;
+		/* max-width: 56em; */
+		padding: 2em;
+		margin: 3rem 2rem 0 2rem;
+		box-sizing: border-box;
+		margin-top: 3rem;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	img.backdrop {
+		position: fixed;
+		z-index: -1;
+		width: 100vw;
+		bottom: 0;
+		opacity: 0.4;
 	}
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
+	footer {
+		width: 100%;
+		background-color: #e7f7fa;
+		font-size: 0.8rem;
+		padding: 0.5rem;
+		box-sizing: border-box;				
+		display: flex;		
 	}
+
+	.page {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		justify-content: space-between;
+		align-items: stretch
+	}
+
+	footer img {
+		height: 0.9rem;
+		padding-left: .4rem;	
+	}
+
 </style>
+
+<div class="page">
+	<Nav />
+
+	<main>
+	</main>
+
+	<footer>© 2020 <img src="/netice9.svg" alt="Net Ice 9 Logo"/></footer>
+</div>
